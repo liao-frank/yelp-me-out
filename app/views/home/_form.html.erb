@@ -27,7 +27,7 @@
 				<!-- NUMBER OF OPTIONS -->
 				<div class="input-field col s6">
 					<input value="5" id="limit-field" name="limit" type="number" class="validate">
-					<label for="limit-field">How many places do you want?</label>
+					<label class="active" for="limit-field">How many places do you want?</label>
 				</div>
 				<!-- SORT BY -->
 				<div class="input-field col s6">
@@ -41,9 +41,10 @@
 						<label>Want it sorted?</label>
 				</div>
 			</div>
-			<div class="row">
-				<input type="submit" value="Submit" id="search-submit" class="waves-effect red darken-4 waves-light btn">
+			<div class="row center">
+				<input type="submit" value="Find me food!" id="search-submit" class="waves-effect red darken-4 waves-light btn">
 			</div>
+			<script>$('select').material_select();</script>
 		</form>
 	</div>
 	</div>
