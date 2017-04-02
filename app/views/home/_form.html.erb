@@ -1,6 +1,6 @@
 <div class="container" style="margin-top: 20px;">
 <div class="container center">
-	Welcome to 'yelp me out' - a food recommendation app that uses the Yelp Fusion API.<br/>
+	Welcome to 'yelp me out' - a super basic food recommendation app that uses the Yelp Fusion API.<br/>
 	Fill out the form below to get some recommendations!<br/><br/>
 	The only thing that is required is some location information.
 </div>
@@ -29,7 +29,29 @@
 				    </select>
 				    <label>How expensive are we talkin'?</label>
 				</div>
+
+				<div class="input-field col s6">
+				    <select multiple name="categories[]">
+				      <option value="" disabled selected></option>
+				      <option value="bbq">Barbeque</option>
+				      <option value="breakfast_brunch">Breakfast & Brunch</option>
+				      <option value="buffets">Buffet</option>
+				      <option value="burgers">Burgers</option>
+				      <option value="cafes">Cafes</option>
+				      <option value="chicken_wings">Wings</option>
+				      <option value="chinese">Chinese</option>
+				      <option value="indpak">Indian</option>
+				      <option value="italian">Italian</option>
+				      <option value="ramen">Ramen</option>
+				      <option value="korean">Korean</option>
+				      <option value="seafood">Seafood</option>
+				      <option value="seafood">Vegetarian</option>
+				    </select>
+				    <label>Whatcha looking for?</label>
+				</div>
 			</div>
+
+
 			
 			<div class="row">
 				<!-- NUMBER OF OPTIONS -->

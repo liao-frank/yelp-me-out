@@ -35,8 +35,12 @@ function goBack() {
 							Price:
 						</th>
 						<td>
-							<% result["price"].length.times do |i| %>
-								<%= image_tag("icons/$.png", :size => "32x32") %>
+							<% if result["price"] != nil %>
+								<% result["price"].length.times do |i| %>
+									<%= image_tag("icons/$.png", :size => "32x32") %>
+								<% end %>
+							<% else %>
+								unknown
 							<% end %>
 						</td>
 					</tr>

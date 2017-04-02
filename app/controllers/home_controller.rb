@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 	helper HomeHelper
-  MULTIPLE_OPTIONS = [:price]
+  MULTIPLE_OPTIONS = [:price, :categories]
   def home
   end
 
