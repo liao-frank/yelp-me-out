@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'home/about'
+
   # Semi-static page routes
   get 'home' => 'home#home', as: :home
+  get 'about' => 'home#about', as: :about
   get 'search' => 'home#search', as: :search
   get 'contact' => 'home#contact', as: :contact
   

@@ -1,20 +1,19 @@
-<h1>Home#search</h1>
-<p>Find me in app/views/home/search.html.erb</p>
-
-
+<!-- A query was attempted -->
 <% if params.has_key?(:location) %>
-	<% for result in search_params(params)["businesses"][0..2] %>
-		<%= result["name"] %><br/>
-		<%= result["rating"] %><br/>
-		<%= result["price"] %><br/>
-		<%= result["location"] %><br/>
-		<hr/>
+	<% @query = search_params(params)["businesses"] %>
+	<!-- No results -->
+	<% if @query == nil %>
+		<%= render 'invalid' %>
+	<% elsif @query != nil %>
+		<% @results = @query[0..2] %>
+		<% if @results != nil %>
+			<%= render 'results' %>
+		<% else %>
+			<%= render 'invalid' %>
+		<% end %>
 	<% end %>
 
+<!-- Fill out a form -->
 <% else %>
-	<div class="container yelp-red-dotted-outline">
-		<div class="container">
-			<%= render 'form' %>
-		</div>
-	</div>
+	<%= render 'form' %>
 <% end %>

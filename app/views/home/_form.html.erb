@@ -1,13 +1,50 @@
-<form style="padding-top: 25px; padding-bottom: 15px;">
-	<div class="row">
-		<div class="input-field col s8">
-			<textarea id="location-field" name="location" class="materialize-textarea" required='true'></textarea>
-			<label for="location-field">Tell Us Where You Are:</label>
-		</div>
+<div class="container yelp-red-dotted-outline">
+	<div class="white-content-area">
+	<div class="container">
+		<form style="padding-top: 25px; padding-bottom: 15px;">
+			<!-- LOCATION -->
+			<div class="row">
+				<div class="input-field col s8">
+					<textarea id="location-field" name="location" class="materialize-textarea" required='true'></textarea>
+					<label for="location-field">Where are you at?</label>
+				</div>
+			</div>
+			<!-- PRICE -->
+			<div class="row">
+				<div class="input-field col s6">
+				    <select multiple name="price[]">
+				      <option value="" disabled selected></option>
+				      <option value="1">$</option>
+				      <option value="2">$$</option>
+				      <option value="3">$$$</option>
+				      <option value="4">$$$$</option>
+				    </select>
+				    <label>How expensive are we talkin'?</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<!-- NUMBER OF OPTIONS -->
+				<div class="input-field col s6">
+					<input value="5" id="limit-field" name="limit" type="number" class="validate">
+					<label for="limit-field">How many places do you want?</label>
+				</div>
+				<!-- SORT BY -->
+				<div class="input-field col s6">
+						<select name="sort_by">
+							<option value="" disabled selected></option>
+							<option value="rating">By Rating</option>
+							<option value="review_count">By Review Count</option>
+							<option value="distance">By Distance</option>
+							<option value="best_match">"Nah, I trust you."</option>
+						</select>
+						<label>Want it sorted?</label>
+				</div>
+			</div>
+			<div class="row">
+				<input type="submit" value="Submit" id="search-submit" class="waves-effect red darken-4 waves-light btn">
+			</div>
+		</form>
 	</div>
-	<div class="row">
-		<input type="submit" value="Submit" id="search-submit" class="waves-effect red darken-4 waves-light btn">
 	</div>
-	<div class="row">
-	</div>
-</form>
+</div>

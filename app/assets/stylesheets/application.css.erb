@@ -13,11 +13,29 @@
  *= require_tree .
  *= require_self
  */
+header {
+	padding: 15px;
+	background-image: url(<%= asset_path 'background.png' %>);
+}
 
 .yelp-red-dotted-outline {
 	border: 2px dotted #d32323;
 }
 
-#search-submit {
-	background-image: url("../images/buttons/yelp-me-out.png")
+.white-content-area {
+	background-color: #fff;
+	margin: 20px;
+}
+
+.unselectable {
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+
+	/*
+	 Introduced in IE 10.
+	 See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+	*/
+	-ms-user-select: none;
+	user-select: none;
 }

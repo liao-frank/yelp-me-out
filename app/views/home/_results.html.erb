@@ -1,0 +1,10 @@
+<hr/>
+<% for result in @results %>
+	<% if result != nil %>
+		<%= result["name"] %><br/>
+		<%= result["rating"] %><br/>
+		<%= result["price"] %><br/>
+		<%= result["location"] %><br/>
+		<hr/>
+	<% end %>
+<% end %>
