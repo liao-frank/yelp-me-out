@@ -9,8 +9,12 @@ function goBack() {
 
 <div class="container center" style="padding-top: 20px;">
 	<h1>Check out these places</h1>
-	<%= params %>
+	<small><%= params %></small>
+
 	<hr/>
+	<% if @results.empty? %>
+		Nothing could be found :/
+	<% end %>
 	<% for result in @results %>
 		<% if result != nil %>
 			<h3 style="padding-top: 20px;"><%= result["name"] %></h3>
