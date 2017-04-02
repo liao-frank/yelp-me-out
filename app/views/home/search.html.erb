@@ -1,0 +1,20 @@
+<h1>Home#search</h1>
+<p>Find me in app/views/home/search.html.erb</p>
+
+
+<% if params.has_key?(:location) %>
+	<% for result in search_params(params)["businesses"][0..2] %>
+		<%= result["name"] %><br/>
+		<%= result["rating"] %><br/>
+		<%= result["price"] %><br/>
+		<%= result["location"] %><br/>
+		<hr/>
+	<% end %>
+
+<% else %>
+	<div class="container yelp-red-dotted-outline">
+		<div class="container">
+			<%= render 'form' %>
+		</div>
+	</div>
+<% end %>

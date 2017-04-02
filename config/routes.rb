@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  # Semi-static page routes
+  get 'home' => 'home#home', as: :home
+  get 'search' => 'home#search', as: :search
+  get 'contact' => 'home#contact', as: :contact
+  
+  # Set the root url
+  root :to => 'home#home'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

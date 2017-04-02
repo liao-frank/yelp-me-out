@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+.yelp-red-dotted-outline {
+	border: 2px dotted #d32323;
+}
+
+#search-submit {
+	background-image: url("../images/buttons/yelp-me-out.png")
+}
