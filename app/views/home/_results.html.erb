@@ -9,6 +9,7 @@ function goBack() {
 
 <div class="container center" style="padding-top: 20px;">
 	<h1>Check out these places</h1>
+	<%= params %>
 	<hr/>
 	<% for result in @results %>
 		<% if result != nil %>
@@ -65,8 +66,4 @@ function goBack() {
 			</div>
 		<% end %>
 	<% end %>
-
-	<script>
-		('.collapsible').collapsible();
-	</script>
 </div>

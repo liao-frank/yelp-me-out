@@ -1,5 +1,5 @@
 <!-- A query was attempted -->
-<% if params.has_key?(:location) %>
+<% if params.has_key?(:location) || (params.has_key?(:latitude) && params.has_key?(:longitude))%>
 	<% @query = search_params(params)["businesses"] %>
 	<!-- No results -->
 	<% if @query == nil %>
