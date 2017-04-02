@@ -1,10 +1,68 @@
-<hr/>
-<% for result in @results %>
-	<% if result != nil %>
-		<%= result["name"] %><br/>
-		<%= result["rating"] %><br/>
-		<%= result["price"] %><br/>
-		<%= result["location"] %><br/>
-		<hr/>
+<div class="row"><a class="waves-effect waves-red btn-flat" style="float: left; margin-left: 100px;" onclick="goBack();"><i class="material-icons left">fast_rewind</i>Lemme try again</a>
+
+</div>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+<div class="container center" style="padding-top: 20px;">
+	<h1>Check out these places</h1>
+	<hr/>
+	<% for result in @results %>
+		<% if result != nil %>
+			<h3 style="padding-top: 20px;"><%= result["name"] %></h3>
+			<small style="position: absolute; margin-top: -20px; margin-left: 200px;"><a href="#top">Back to top</a></small>
+			<div class="row">
+				<div class="col s6" style="text-align: right; margin-top: 10px;">
+					<%= result["location"]["address1"] %><br/>
+					<%= result["location"]["city"] %>,&nbsp;
+					<%= result["location"]["state"] %>&nbsp;
+					<%= result["location"]["zip_code"] %><br/>
+					<%= result["phone"] %>
+				</div>
+				<div class="col s6">
+					<img src='<%= result["image_url"] %>' style="max-height: 100px; float: left; border-radius: 30%;"/>
+				</div>
+			</div>
+			
+			<div class="container">
+			<div class="yelp-red-dotted-outline" style="padding: 20px;">
+				<table class="striped">
+					<tr>
+						<th style="text-align: center;">
+							Price:
+						</th>
+						<td>
+							<% result["price"].length.times do |i| %>
+								<%= image_tag("icons/$.png", :size => "32x32") %>
+							<% end %>
+						</td>
+					</tr>
+					<tr>
+						<th style="text-align: center;">
+							Rating:
+						</th>
+						<td>
+							<%= result["rating"] %>
+						</td>
+					</tr>
+					<tr>
+						<th style="text-align: center;">
+							Distance:
+						</th>
+						<td>
+							<%= (result["distance"]/1609.34).round(2) %> mi
+						</td>
+					</tr>
+				</table>
+			</div>
+			</div>
+		<% end %>
 	<% end %>
-<% end %>
+
+	<script>
+		('.collapsible').collapsible();
+	</script>
+</div>

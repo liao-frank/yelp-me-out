@@ -5,7 +5,7 @@
 	<% if @query == nil %>
 		<%= render 'invalid' %>
 	<% elsif @query != nil %>
-		<% @results = @query[0..2] %>
+		<% @results = @query %>
 		<% if @results != nil %>
 			<%= render 'results' %>
 		<% else %>

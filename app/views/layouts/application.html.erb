@@ -10,15 +10,16 @@
   <!-- Materialize -->
   <%= stylesheet_link_tag 'materialize' %>
   <%= javascript_include_tag 'materialize' %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
-
+<div id="top"></div>
 <header class="center" style="margin-top: 20px; margin-bottom: 20px;">
     <div class="row">
         <%= image_tag('logos/yelp-me-out.png', :size => "500x128", :class => "unselectable") %>
     </div>
 </header>
-<%= params %>
 
 <%= yield %>
 

@@ -5,6 +5,8 @@ class HomeController < ApplicationController
   end
 
   def search
+    # defaults
+    params[:open_now] = true
     # multiple combinations
     for parameter in MULTIPLE_OPTIONS
       if params.has_key?(parameter) && params[parameter].kind_of?(Array)
