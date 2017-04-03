@@ -1,3 +1,5 @@
+#yelp me out
+
 'yelp me out' is a food recommender that focuses on basic qualities that a hungry person might be looking for:
 
 - Location (accepts a range of formats handled by Yelp API, or alternatively, HTML5 coordinates)
