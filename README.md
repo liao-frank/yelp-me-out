@@ -1,4 +1,4 @@
-#yelp me out
+# yelp me out
 
 'yelp me out' is a food recommender that focuses on basic qualities that a hungry person might be looking for:
 
