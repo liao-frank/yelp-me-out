@@ -9,7 +9,7 @@
 
 The app in built on Ruby on Rails and deployed through heroku. The direct API communication was derived from Tomer Elmalem's publicly available example code; Elmalem is currently an employee for Yelp. Links are below and basic screenshots are attached.
 
-**The app is hosted on a free Heroku dyno [here](https://stormy-mesa-60847.herokuapp.com/). The app may take up to a minute to wake up and load on the first visit.**
+**The app is hosted on a free on Heroku [here](https://stormy-mesa-60847.herokuapp.com/). The app may take up to a minute to wake up and load on the first visit.**
 
 ### Main References: 
 
